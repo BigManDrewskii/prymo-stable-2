@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#000000" />
+    
+    <!-- Primary Meta Tags -->
+    <title>PRYMO - AI-Powered Text Enhancement Tool</title>
+    <meta name="title" content="PRYMO - AI-Powered Text Enhancement Tool" />
+    <meta name="description" content="Transform your writing with AI-powered text enhancement. Improve clarity, tone, and professionalism while maintaining your unique voice and original meaning." />
+    <meta name="keywords" content="AI writing, text enhancement, writing assistant, AI editor, content improvement, PRYMO, artificial intelligence, writing tool, text optimizer" />
+    <meta name="author" content="PRYMO" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prymo.com/" />
+    <meta property="og:title" content="PRYMO - AI-Powered Text Enhancement Tool" />
+    <meta property="og:description" content="Transform your writing with AI-powered text enhancement. Improve clarity, tone, and professionalism while maintaining your unique voice." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="PRYMO" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://prymo.com/" />
+    <meta property="twitter:title" content="PRYMO - AI-Powered Text Enhancement Tool" />
+    <meta property="twitter:description" content="Transform your writing with AI-powered text enhancement. Improve clarity, tone, and professionalism while maintaining your unique voice." />
+    <meta property="twitter:image" content="/og-image.png" />
+    <meta property="twitter:site" content="@prymo_ai" />
+    <meta property="twitter:creator" content="@prymo_ai" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="application-name" content="PRYMO" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="PRYMO" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    
+    <!-- Performance and Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://tally.so" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://tally.so" />
+    <link rel="dns-prefetch" href="https://openrouter.ai" />
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PRYMO",
+      "description": "AI-powered text enhancement tool that improves clarity, tone, and professionalism while maintaining your unique voice.",
+      "url": "https://prymo.com",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "PRYMO"
+      },
+      "featureList": [
+        "AI-powered text enhancement",
+        "Multiple AI model support",
+        "Real-time text processing",
+        "Privacy-focused design",
+        "No signup required"
+      ]
+    }
+    </script>
+    
+    <!-- Tally.so embed script for newsletter signup -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    
+    <!-- Performance monitoring (placeholder for production) -->
+    <!-- <script>
+      // Add performance monitoring script here
+      // Example: Google Analytics, Hotjar, etc.
+    </script> -->
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
