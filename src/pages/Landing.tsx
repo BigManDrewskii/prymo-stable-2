@@ -161,31 +161,17 @@ const Landing = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-border/50 hover:bg-muted/50" asChild>
+              <Button variant="outline" size="lg" style={{border: "1px solid rgba(143, 143, 143, 0.5)"}} className="text-lg px-8 py-4 hover:bg-muted/50" asChild>
                 <Link to="/app?demo=true">View Demo</Link>
               </Button>
             </div>
 
-            <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                <span>No signup required</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                <span>Secure & private</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                <span>Instant results</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
       {/* Build In Public Section */}
-      <section id="features" className="py-16 bg-background">
+      <section id="features" className="py-16">
         <div className="container mx-auto px-4 max-w-[1440px]">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold">
@@ -264,20 +250,6 @@ const Landing = () => {
                   </Button>
                 </div>
 
-                <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 pt-2">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>No credit card required</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>Start enhancing immediately</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>Secure & private</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -285,7 +257,7 @@ const Landing = () => {
       </section>
 
       {/* Footer - Card Design */}
-      <footer className="py-12 bg-background">
+      <footer className="py-12">
         <div className="container mx-auto px-4 max-w-[1440px]">
           <div className="max-w-xl mx-auto flex flex-col">
             <ThemeLogo className="h-8 w-auto mx-auto" />
