@@ -25,21 +25,36 @@ const Landing = () => {
   // Get Tally attributes from configuration
   const tallyAttributes = getTallyAttributes();
 
-  const features = [
+  const buildInPublicEpisodes = [
     {
-      icon: <Sparkles className="h-6 w-6" />,
-      title: "AI-Powered Enhancement",
-      description: "Transform your text with advanced AI models including Claude 3.5 Sonnet and GPT-4o Mini for superior quality."
+      episodeNumber: 1,
+      embedId: "_HonzZvJI7g",
+      title: "Episode 1",
+      description: "Getting Started with PRYMO"
     },
     {
-      icon: <Zap className="h-6 w-6" />,
-      title: "Lightning Fast",
-      description: "Get enhanced text in seconds with our optimized API integration and intelligent model selection."
+      episodeNumber: 2,
+      embedId: "543kqAleXTE",
+      title: "Episode 2",
+      description: "Building the Core Features"
     },
     {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Secure & Private",
-      description: "Your text is processed securely with no data retention. Your privacy is our priority."
+      episodeNumber: 3,
+      embedId: "vAmmy7yj62c",
+      title: "Episode 3",
+      description: "Enhancing the User Experience"
+    },
+    {
+      episodeNumber: 4,
+      embedId: "MHWel4dcC24",
+      title: "Episode 4",
+      description: "Advanced AI Integration"
+    },
+    {
+      episodeNumber: 5,
+      embedId: "25KH83jwBGw",
+      title: "Episode 5",
+      description: "Optimizing Performance"
     }
   ];
 
@@ -169,27 +184,47 @@ const Landing = () => {
         </div>
       </div>
 
-      {/* Simplified Features Section */}
+      {/* Build In Public Section */}
       <section id="features" className="py-16 bg-background">
         <div className="container mx-auto px-4 max-w-[1440px]">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold">
-              <span className="text-primary">Key Features</span>
+              <span className="text-primary">Build In Public</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-              Everything you need to enhance your writing with AI assistance
+              Follow my journey as I build PRYMO from the ground up
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all bg-card flex flex-col items-center text-center">
-                  <div className="p-3 rounded-full bg-primary/10 text-primary mb-4">
-                    {feature.icon}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {buildInPublicEpisodes.map((episode) => (
+                <div 
+                  key={episode.episodeNumber} 
+                  className="border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all bg-card flex flex-col"
+                >
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/10">
+                      <iframe 
+                        className="w-full h-full" 
+                        src={`https://www.youtube.com/embed/${episode.embedId}`}
+                        title="YouTube video player" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerPolicy="strict-origin-when-cross-origin" 
+                        allowFullScreen
+                      />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-semibold">{episode.title}</h3>
+                      <span className="text-xs py-1 px-2 bg-primary/10 text-primary rounded-full">
+                        Ep. {episode.episodeNumber}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{episode.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
